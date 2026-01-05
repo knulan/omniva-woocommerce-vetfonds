@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Omniva shipping
- * Description: Official Omniva shipping plugin for WooCommerce
+ * Plugin Name: Vetfonds - Omniva shipping
+ * Description: Vetfonds adaptation of Official Omniva shipping plugin for WooCommerce
  * Author: Omniva
  * Author URI: https://www.omniva.lt/
  * Plugin URI: https://www.omniva.lt/en/business/integrations-for-e-shops

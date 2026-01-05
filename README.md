@@ -1,4 +1,4 @@
-# Omniva plugin for WP WooCommerce
+# Vetfonds - Omniva plugin for WP WooCommerce
 
 ## Minimum requirements
 - Server: PHP 7.2
