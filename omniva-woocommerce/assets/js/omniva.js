@@ -163,8 +163,9 @@ function omnivalt_init_map() {
 /*** Old method (for dropdown) ***/
 
 jQuery('document').ready(function($){
-    $('input.shipping_method').on('click',function(){
+    $('input.shipping_method').on('change',function(){
         var current_method = $(this);
+
         if (current_method.val() == "omnivalt_pt"){
             $('.omnivalt_terminal_container.old').show();
         } else {
@@ -172,6 +173,19 @@ jQuery('document').ready(function($){
         }
     });
     $('input.shipping_method:checked').trigger('click');
+
+    function handleSelection() {
+        const selectedShippingMethod = $('input[name="shipping_method[0]"]:checked').val() || $('input[name="shipping_method[0]"]').val();
+
+        if (selectedShippingMethod == "omnivalt_pt"){
+            $('.omnivalt_terminal_container.old').show();
+        } else {
+            $('.omnivalt_terminal_container.old').hide();
+        }
+    }
+
+    $(document).on('change', 'input[name="shipping_method[0]"]', handleSelection);
+    handleSelection();
  
     $(document.body).on( 'updated_wc_div', function(){
         if ($(".woocommerce-shipping-calculator").length) {

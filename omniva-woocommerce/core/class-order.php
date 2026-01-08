@@ -57,7 +57,7 @@ class OmnivaLt_Order
     $method_key = OmnivaLt_Omniva_Order::get_method_key_from_id($method->id);
     $terminals_type = OmnivaLt_Method::get_terminal_type($method_key);
 
-    if ( $terminals_type ) {
+      if ( $terminals_type && in_array($method->id, $selected_shipping_method) ) {
       echo OmnivaLt_Terminals::get_terminals_options($termnal_id, $country, $terminals_type);
     }
   }
